@@ -1,0 +1,251 @@
+.wordle {
+	margin: 65px auto 0;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	align-items: center;
+	position: relative;
+
+	&__result {
+		padding: 7px;
+		position: absolute;
+		top: -55px;
+		font-size: 20px;
+		border: 2px solid #d2d2d2;
+		border-radius: 5px;
+		font-weight: 500;
+	}
+
+	&__button {
+		margin-top: 7px;
+		margin-left: 10px;
+		cursor: pointer;
+		padding: 0 10px;
+		font-size: 26px;
+		border-radius: 50px;
+		border: 2px solid #d2d2d2;
+		width: 50px;
+		height: 50px;
+
+		&:active {
+			background-color: #d2d2d2;
+		}
+
+		&-restart {
+			margin-top: 10px;
+			padding: 10px;
+			font-size: 20px;
+			border: 2px solid #d2d2d2;
+			border-radius: 5px;
+			font-weight: 500;
+			cursor: pointer;
+
+			&:active {
+				background-color: #d2d2d2;
+			}
+		}
+	}
+
+	&__table {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		&__word {
+			display: flex;
+			width: 335px;
+			height: 65px;
+			justify-content: space-between;
+
+			&-wrong {
+				animation: 0.1s linear 1 forwards wrong-word;
+			}
+
+			&__letter {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 60px;
+				height: 60px;
+				border: 2px solid #d2d2d2;
+				padding: 15px;
+				font-size: 30px;
+				font-weight: 700;
+
+				&-jump {
+					animation: 0.1s ease-in-out 1 alternate letter-jump;
+				}
+
+				&-result {
+					animation: 0.2s ease-in-out 1 forwards letter-result;
+					backface-visibility: hidden;
+				}
+			}
+		}
+	}
+}
+
+.keyboard {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	& > div {
+		display: flex;
+		gap: 0 8px;
+		justify-content: center;
+
+		& > button {
+			min-width: 45px;
+			height: 60px;
+			background-color: #d2d2d2;
+			border: 0;
+			border-radius: 5px;
+			color: black;
+			font-size: 26px;
+			font-weight: 500;
+			cursor: pointer;
+
+			&:active {
+				background-color: #bebebe;
+			}
+		}
+	}
+}
+
+.heading {
+	margin: 30px 0 0 50px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+
+	& > h3,
+	h1 {
+		margin: 0;
+
+		& > a {
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+
+	& > h3 {
+		font-size: 18px;
+	}
+}
+
+.logo {
+	margin: 0 auto;
+	display: block;
+	height: 60px;
+}
+
+.overflow {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.tutorial {
+	border-radius: 10px;
+	background-color: #fff;
+	width: 500px;
+	height: fit-content;
+	padding: 20px;
+	margin: 100px auto;
+
+	&__button {
+		text-align: end;
+
+		& > button {
+			cursor: pointer;
+			padding: 0 10px;
+			font-size: 20px;
+			border-radius: 50px;
+			border: 2px solid #d2d2d2;
+			width: 40px;
+			height: 40px;
+
+			&:active {
+				background-color: #bebebe;
+			}
+		}
+	}
+
+	&__content {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+
+		& > div {
+			& > h2 {
+				text-align: center;
+			}
+
+			& > ul {
+				padding-left: 20px;
+			}
+		}
+
+		&__pic {
+			margin: 0 auto;
+			display: block;
+			width: 300px;
+		}
+
+		& span {
+			font-weight: 700;
+		}
+	}
+}
+
+@keyframes letter-jump {
+	0% {
+		scale: 1;
+	}
+
+	50% {
+		scale: 1.1;
+	}
+
+	100% {
+		scale: 1;
+	}
+}
+
+@keyframes letter-result {
+	0% {
+		rotate: x 0deg;
+	}
+
+	50% {
+		rotate: x 180deg;
+	}
+
+	100% {
+		rotate: x 360deg;
+	}
+}
+
+@keyframes wrong-word {
+	0% {
+		translate: 15px;
+	}
+
+	33% {
+		translate: 0px;
+	}
+
+	67% {
+		translate: -15px;
+	}
+
+	100% {
+		translate: 0px;
+	}
+}
