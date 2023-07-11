@@ -8,7 +8,7 @@ export const TutorialModal = ({ tutorialHandler }) => {
 			event.stopPropagation()
 			console.log('stopPropagation()')
 		}
-		console.log('TutorialModal')
+
 		document.addEventListener('keydown', handler)
 
 		return () => {

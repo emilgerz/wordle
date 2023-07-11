@@ -118,7 +118,7 @@
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 
 	& > h3,
 	h1 {
@@ -138,10 +138,13 @@
 .logo {
 	margin: 0 auto;
 	display: block;
-	height: 60px;
+	height: 100px;
 }
 
 .overflow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100vw;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -156,7 +159,6 @@
 	width: 500px;
 	height: fit-content;
 	padding: 20px;
-	margin: 100px auto;
 
 	&__button {
 		text-align: end;
@@ -247,5 +249,57 @@
 
 	100% {
 		translate: 0px;
+	}
+}
+
+@media (max-width: 420px) {
+	.keyboard {
+		scale: 0.7;
+	}
+
+	.wordle {
+		margin-top: 0;
+	}
+
+	.wordle__table {
+		scale: 0.9;
+		height: 350px;
+	}
+
+	.tutorial {
+		scale: 0.8;
+	}
+}
+
+@media (max-width: 390px) {
+	.wordle {
+		margin-top: 0;
+		gap: 0;
+	}
+}
+
+@media (max-width: 380px) {
+	.keyboard {
+		scale: 0.7;
+	}
+
+	.wordle {
+		margin-top: 0;
+		gap: 0;
+	}
+
+	.wordle__table {
+		scale: 0.9;
+		height: 350px;
+	}
+
+	.heading {
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 320px) {
+	.keyboard {
+		scale: 0.6;
 	}
 }

@@ -7,7 +7,7 @@ import { createPortal } from 'react-dom'
 import { TutorialModal } from './components/TutorialModal'
 import 'modern-css-reset'
 import './App.scss'
-import logo from './assets/img/logo.png'
+import logo from './assets/img/logo.svg'
 
 const initialState = {
 	hiddenWord: '',
