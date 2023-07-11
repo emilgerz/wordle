@@ -60,7 +60,7 @@ export function Keyboard({ onLetterPress, onBsPress, onEnterPress, letterColor, 
 
 			<div>
 				<button
-					style={{ fontSize: 16 }}
+					style={{ fontSize: 16, width: 60 }}
 					onClick={() => {
 						onEnterPress()
 					}}
@@ -79,7 +79,7 @@ export function Keyboard({ onLetterPress, onBsPress, onEnterPress, letterColor, 
 				))}
 
 				<button
-					style={{ padding: '0 20px' }}
+					style={{ padding: '0 20px', width: 60 }}
 					onClick={() => onBsPress()}
 				>
 					<Backspace />
