@@ -1,5 +1,7 @@
 ## WORDLE
 
+[PLAY NOW](https://wordle-eg.netlify.app)
+
 ### Explanation
 
 Famous mini-game to find out what 6-letters word was hidden <br/>
@@ -15,6 +17,8 @@ You have 6 tries to find him, every try will give you clue on strokes and keyboa
 ---
 
 ## WORDLE RU
+
+[PLAY NOW](https://wordle-eg.netlify.app)
 
 ### Краткое описание
 
